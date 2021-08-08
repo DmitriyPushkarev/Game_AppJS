@@ -66,7 +66,6 @@ function createRandomCircle () {
     circle.style.height = `${size}px`
     circle.style.top = `${y}px`
     circle.style.left = `${x}px`
-
     board.append (circle)
 }
 
