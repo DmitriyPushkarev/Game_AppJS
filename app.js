@@ -30,7 +30,7 @@ board.addEventListener ('click', event => {
 
 function startGame () {
     setInterval(decreaseTime, 1000)
-    createRandomCircle ()
+    createRandomCircle()
     setTime (time)
 }
 
@@ -56,11 +56,11 @@ function finishGame () {
 }
 
 function createRandomCircle () {
-    const circle = doc.createElement ('div')
+    const circle = document.createElement ('div')
     const size = getRandomNumber (10, 60)
-    const qqq = board.getBoundingClientRect()
-    const x = getBoundingClientRect (0, width-size)
-    const y = getBoundingClientRect (0, height-size)
+    const {width, height} = board.getBoundingClientRect()
+    const x = getRandomNumber (0, width-size)
+    const y = getRandomNumber (0, height-size)
     circle.classList.add ('circle')
     circle.style.width = `${size}px`
     circle.style.height = `${size}px`
