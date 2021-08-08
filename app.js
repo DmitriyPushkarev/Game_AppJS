@@ -27,7 +27,6 @@ board.addEventListener ('click', event => {
     }
 })
 
-startGame()
 
 function startGame () {
     setInterval(decreaseTime, 1000)
@@ -52,7 +51,8 @@ function setTime (value) {
 }
 
 function finishGame () {
-
+    timeEl.parentNode.classList.add ('hide')
+    board.innerHTML = `<h1>Счет: <span class="primary">${score}</span></h1>`
 }
 
 function createRandomCircle () {
