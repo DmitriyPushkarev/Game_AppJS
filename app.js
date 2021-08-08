@@ -37,12 +37,12 @@ function startGame () {
 function decreaseTime () {
     if (time === 0) {
         finishGame ()
-    } else if {
+    } else {
         let current = --time
-        if (current < 10) {
+            if (current < 10) {
         current = `0${current}`
     }
-        setTime (current)
+        setTime(current)
     }
 }
 
